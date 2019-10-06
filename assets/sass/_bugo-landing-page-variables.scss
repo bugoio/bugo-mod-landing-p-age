@@ -1,0 +1,23 @@
+/**
+  * BUGO LANDING PAGE VARIABLES
+  * * use these variables to control spacing and responsive
+  * * use classes in the shortcode to change other styles
+  **/
+
+$section-bg-default: transparent;
+
+/**
+  * SPACING
+  * * use a value of: false | modular scale
+  * * false value parses to 0
+  **/
+
+$section-margin-top: $global-margin !default; // false | modular scale
+$section-margin-right: false !default; // false | modular scale
+$section-margin-bottom: $global-margin !default; // false | modular scale
+$section-margin-left: false !default; // false | modular scale
+
+$section-padding-top: $global-padding !default; // false | modular scale
+$section-padding-right: false !default; // false | modular scale
+$section-padding-bottom: $global-padding !default; // false | modular scale
+$section-padding-left: false !default; // false | modular scale

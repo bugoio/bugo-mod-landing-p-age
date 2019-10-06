@@ -1,0 +1,20 @@
+@import "bugo-landing-page-variables";
+
+
+body.landing-page {
+  .section {
+    // SPACING
+    @include set-margin($section-margin-top, $section-margin-right, $section-margin-bottom, $section-margin-left);
+    @include set-padding($section-padding-top, $section-padding-right, $section-padding-bottom, $section-padding-left);
+
+    .container {
+      > :first-child(){
+        margin-top: 0;
+      }
+
+      > :last-child(){
+        margin-bottom: 0;
+      }
+    }
+  }
+}

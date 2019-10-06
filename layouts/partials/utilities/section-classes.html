@@ -1,0 +1,23 @@
+{{ $classes := slice "section"}}
+{{- if .Params.no_container -}}
+  {{ $classes = $classes | append "no-container" }}
+{{- end -}}
+{{- if .Params.no_padding -}}
+  {{ $classes = $classes | append "no-padding" }}
+{{- end -}}
+{{- with .Params.text_alignment -}}
+  {{ $classes = $classes | append (printf "text-%s" (. | urlize) ) }}
+{{ end }}
+{{- with .Params.color_scheme -}}
+   {{ $classes = $classes | append ( . | urlize ) }}
+{{- end }}
+{{- if .Params.Params.background_image -}}
+  {{ $classes = $classes | append "has-bg-image" }}
+{{- end -}}
+{{- if .Params.parallax_background -}}
+  {{ $classes = $classes | append "jarallax" }}
+{{- end -}}
+{{- if .Params.background_video_url -}}
+  {{ $classes = $classes | append "has-bg-video" }}
+{{- end -}}
+{{ return delimit $classes " " }}

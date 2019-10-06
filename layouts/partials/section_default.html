@@ -1,0 +1,16 @@
+{{ $options := dict "context" . "image" .Params.background_image "transform" "w_1600"}}
+{{ $imgURL := partial "utilities/cloudinary-transform" $options }}
+<div
+  id="{{ .Title | anchorize }}-block"
+  {{ if .Params.background_image }}
+    style="background-image: url({{ $imgURL }});"
+  {{ end }}
+  class="{{ partial "utilities/section-classes" . }}"
+  aria-label="{{ .Title }}"
+  role="region"
+  tabindex="0"
+>
+  <div class="container">
+    {{ .Content }}
+  </div>
+</div>

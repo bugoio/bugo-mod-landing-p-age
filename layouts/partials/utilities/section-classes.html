@@ -1,4 +1,4 @@
-{{ $classes := slice "section"}}
+{{ $classes := slice "section" ( .Title | urlize ) }}
 {{- if .Params.no_container -}}
   {{ $classes = $classes | append "no-container" }}
 {{- end -}}

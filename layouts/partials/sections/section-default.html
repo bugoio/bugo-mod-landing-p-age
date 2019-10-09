@@ -5,7 +5,7 @@
   {{ if .Params.background_image }}
     style="background-image: url({{ $imgURL }});"
   {{ end }}
-  class="section-{{ .Title | urlize }} {{ partial "utilities/section-classes" . }}"
+  class="section {{ partial "utilities/section-classes" . }}"
   aria-label="{{ .Title }}"
   role="region"
   tabindex="0"

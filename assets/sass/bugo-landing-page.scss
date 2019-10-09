@@ -1,5 +1,16 @@
-@import "bugo-landing-page-vars";
+/**
+ * BUGO LANDING PAGE
+ *
+ * * note
+ * TODO: something
+ * ! Deprecate
+ * ? Question
+ * @param myParam
+ **/
 
+ @import "bugo-landing-page-vars";
+@debug "Loading Bugo Landing Page Module SASS";
+@import "custom-variables";
 
 body.landing-page {
   .section {

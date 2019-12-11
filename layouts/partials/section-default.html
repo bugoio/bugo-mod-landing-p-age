@@ -6,9 +6,6 @@
     style="background-image: url({{ $imgURL }});"
   {{ end }}
   class="section-{{ .Title | urlize }} {{ partial "utilities/section-classes" . }}"
-  aria-label="{{ .Title }}"
-  role="region"
-  tabindex="0"
 >
   <div class="container">
     {{ .Content }}

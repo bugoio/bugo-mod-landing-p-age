@@ -1,4 +1,9 @@
-{{ $options := dict "context" . "image" .Params.background_image "transform" "w_1600"}}
+{{/**
+  Deprecated.
+  This template calls the correct template.
+  Orginal code below:
+
+  {{ $options := dict "context" . "image" .Params.background_image "transform" "w_1600"}}
 {{ $imgURL := partial "utilities/cloudinary-transform" $options }}
 <div
   id="{{ .Title | anchorize }}-block"
@@ -13,4 +18,6 @@
   <div class="container">
     {{ .Content }}
   </div>
-</div>
+
+**/}}
+{{ partial "section-default" . }}
